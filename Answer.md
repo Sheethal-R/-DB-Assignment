@@ -1,0 +1,8 @@
+1. In a relational database, the relationship between a "Product" entity and a "Product_Category" entity is often a one-to-many (1:N) relationship. This means:
+   One product can belong to only one category (eg, "Electronics").
+   However, one category can have many products associated with it (eg, multiple electronic devices like smartphones, laptops, etc., can belong to the "Electronics" category).
+   To establish this relationship in the database schema:
+   Primary-foreign key relationship: The "Product" entity typically has a foreign key that references the primary key of the "Product_Category" entity. This foreign key usually resides in the "Product" table and links each product to its respective category.
+   Referential integrity constraint: A referential integrity constraint ensures that the value of the foreign key in the "Product" table must match a valid primary key value in the "Product_Category" table. This constraint maintains data consistency and prevents orphaned records.
+
+2. Each product in the "Product" table has a valid category assigned to it is by using referential integrity constraints in the database schema. This can be achieved    by creating a foreign key constraint in the "Product" table that references the primary key of the "Product_Category" table. By this constraint, the database will prevent the insertion of a product with a category that does not exist in the "Product_Category" table, thus ensuring that each product has a valid category assigned to it.
